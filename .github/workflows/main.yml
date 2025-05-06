@@ -17,7 +17,7 @@ jobs:
         distribution: temurin
     - name: Install zowe
       run: |
-        apt install libsecret-1-0
+        sudo apt install libsecret-1-0
         npm install -g @zowe/cli@zowe-v2-lts
         zowe profiles create zosmf-profile myprofile123 --host 204.90.115.200 --port 10443 --user ${ZOWE_USERNAME} --password ${ZOWE_PASSWORD}
       env:
