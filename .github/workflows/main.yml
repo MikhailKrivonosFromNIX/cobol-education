@@ -14,6 +14,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
+        distribution: temurin
     - name: Run COBOL Check
       env:
         ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
