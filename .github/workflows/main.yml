@@ -20,18 +20,18 @@ jobs:
         npm install -g @zowe/cli@zowe-v2-lts
     - name: Verify Zowe CLI installation
       run: zowe --version
-    - name: Set up Zowe CLI profile
-      run: |
-        zowe config set secure-credentials false
-        zowe config init --global-config
-        zowe config set profiles.base.host 204.90.115.200
-        zowe config set profiles.base.user ${{ secrets.ZOWE_USERNAME }}
-        zowe config set profiles.base.password ${{ secrets.ZOWE_PASSWORD }}
-        zowe config set profiles.base.reject-unauthorized false
-        zowe config set secure-credentials false
-      env:
-        ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
-        ZOWE_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
+#    - name: Set up Zowe CLI profile
+#      run: |
+#        zowe config set secure-credentials false
+#        zowe config init --global-config
+#        zowe config set profiles.base.host 204.90.115.200
+#        zowe config set profiles.base.user ${{ secrets.ZOWE_USERNAME }}
+#        zowe config set profiles.base.password ${{ secrets.ZOWE_PASSWORD }}
+#        zowe config set profiles.base.reject-unauthorized false
+#        zowe config set secure-credentials false
+#      env:
+#        ZOWE_USERNAME: ${{ secrets.ZOWE_USERNAME }}
+#        ZOWE_PASSWORD: ${{ secrets.ZOWE_PASSWORD }}
     - name: Run COBOL Check
       run: |
         chmod +x .github/scripts/zowe_operations.sh
