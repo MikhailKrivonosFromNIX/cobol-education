@@ -9,7 +9,7 @@ export PATH=$PATH:/usr/lpp/zowe/cli/node/bin
 java -version
 
 # Change to the cobolcheck directory
-cd cobolcheck
+cd cobol-check
 echo "Changed to $(pwd)"
 ls -al
 
