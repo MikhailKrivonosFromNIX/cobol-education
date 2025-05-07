@@ -22,7 +22,7 @@ jobs:
       run: zowe --version
     - name: Set up Zowe CLI profile
       run: |
-        zowe config init
+        zowe config init --global-config
         zowe config set profiles.base.host 204.90.115.200
         zowe config set profiles.base.user ${{ secrets.ZOWE_USERNAME }}
         zowe config set profiles.base.password ${{ secrets.ZOWE_PASSWORD }}
