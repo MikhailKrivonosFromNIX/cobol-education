@@ -52,6 +52,7 @@ run_cobolcheck() {
         fi
     else
         echo "${program}.JCL not found"
+    fi
 }
 
 # Run for each program
