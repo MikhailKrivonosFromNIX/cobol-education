@@ -28,6 +28,7 @@ run_cobolcheck() {
     echo "Running cobolcheck for $program"
 
     # Run cobolcheck, but don't exit if it fails
+    ls
     ./cobolcheck -p $program
     echo "Cobolcheck execution completed for $program (exceptions may have occured)"
 
