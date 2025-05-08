@@ -57,7 +57,7 @@ run_cobolcheck() {
 
 # Run for each program
 for program in NUMBERS EMPPAY DEPTPAY; do 
-    run_cobolcheck $program
+    run_cobolcheck ../$program.JCL
 done
 
 echo "Mainframe operations compoleted"
