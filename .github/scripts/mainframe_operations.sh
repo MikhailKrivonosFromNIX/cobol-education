@@ -9,7 +9,7 @@ export PATH=$PATH:/usr/lpp/zowe/cli/node/bin
 java -version
 
 # Change to the cobolcheck directory
-cd cobol-check
+cd cobolcheck
 echo "Changed to $(pwd)"
 ls -al
 
@@ -28,8 +28,8 @@ run_cobolcheck() {
     echo "Running cobolcheck for $program"
 
     # Run cobolcheck, but don't exit if it fails
-    # ./cobolcheck -p $program
-    java -jar bin/cobol-check-0.2.17.jar -p $program
+    ./cobolcheck -p $program
+    #java -jar bin/cobol-check-0.2.17.jar -p $program
     echo "Cobolcheck execution completed for $program (exceptions may have occured)"
 
     # Check if CC##99.CBL was created, regardless of cobolcheck exit status
